@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kubernetes Cluster with Minikube</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f4f7fa;
+      color: #333;
+    }
+    header {
+      background: #326ce5;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    section {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #326ce5;
+    }
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+    code {
+      background: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    footer {
+      background: #326ce5;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Build a Kubernetes Cluster Locally with Minikube</h1>
+    <p><b>Objective:</b> Deploy and manage applications in Kubernetes</p>
+  </header>
+
+  <section>
+    <h2>Tools Used</h2>
+    <ul>
+      <li>Minikube</li>
+      <li>kubectl</li>
+      <li>Docker</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Deliverables</h2>
+    <ul>
+      <li>YAML configuration files (<code>deployment.yaml</code>, <code>service.yaml</code>)</li>
+      <li>Screenshots of running Pods and Services</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Steps / Hints</h2>
+    <ol>
+      <li>Install Minikube & start the cluster:
+        <pre><code>minikube start</code></pre>
+      </li>
+      <li>Create <code>deployment.yaml</code> for an app and apply it:
+        <pre><code>kubectl apply -f deployment.yaml</code></pre>
+      </li>
+      <li>Expose app using <code>service.yaml</code>:
+        <pre><code>kubectl apply -f service.yaml</code></pre>
+      </li>
+      <li>Verify running pods:
+        <pre><code>kubectl get pods</code></pre>
+      </li>
+      <li>Check services:
+        <pre><code>kubectl get svc</code></pre>
+      </li>
+      <li>Scale deployments:
+        <pre><code>kubectl scale deployment my-app --replicas=3</code></pre>
+      </li>
+      <li>Describe resources and check logs:
+        <pre><code>kubectl describe pod my-app-pod</code></pre>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Conclusion</h2>
+    <p>
+      By following these steps, you can set up a local Kubernetes cluster using Minikube, 
+      deploy containerized applications, expose them as services, and manage scaling and monitoring using kubectl.
+    </p>
+  </section>
+
+  <footer>
+    <p>Project: Build a Kubernetes Cluster with Minikube | Author: Your Name</p>
+  </footer>
+</body>
+</html>
